@@ -1,10 +1,8 @@
 # Hello Fresh Recipe Frontend
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d937e0a7-e93b-40c7-aa34-72b438aa9340/deploy-status)](https://app.netlify.com/sites/whatsapp-proxy/deploys)
-
 ## Introduction
-Hello Fresh Recipe Frontend is a Svelte webapp that displays a large list of Hello Fresh recipes.
 
+Hello Fresh Recipe Frontend is a Svelte webapp that displays a large list of Hello Fresh recipes.
 
 ## Developing
 
