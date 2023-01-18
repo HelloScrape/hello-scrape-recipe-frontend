@@ -2,9 +2,12 @@
 	import { goto } from '$app/navigation';
 	import { RecipeRoute } from '$lib/const/routes';
 	import type { Recipe } from '$lib/typeDef/recipeApiResponse';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _, isLoading } from 'svelte-i18n';
 	export let recipe: Recipe;
-	function openRecipeDetails(){
-		goto(`${RecipeRoute}/${recipe._id}`)
+	setupLocale();
+	function openRecipeDetails() {
+		goto(`${RecipeRoute}/${recipe._id}`);
 	}
 </script>
 
@@ -18,7 +21,11 @@
 		{recipe.description.split('.')[0].split('!')[0]}.
 	</div>
 	<div class="card-actions">
-		<button type="button" on:click={openRecipeDetails} class="card-action-readMore">Read More</button>
+		{#if !$isLoading}
+			<button type="button" on:click={openRecipeDetails} class="card-action-readMore"
+				>{$_('read_recipe')}</button
+			>
+		{/if}
 	</div>
 </div>
 

@@ -9,7 +9,7 @@
 			class="githubProfile"
 			target="_blank"
 			rel="noreferrer"
-			href="https://github.com/GewoonJaap/whatsapp-proxies">Jaap</a
+			href="https://github.com/GewoonJaap/">Jaap</a
 		>
 	</span>
 	<span class="disclaimer">

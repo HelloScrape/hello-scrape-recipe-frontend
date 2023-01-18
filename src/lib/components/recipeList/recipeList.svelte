@@ -1,8 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { allRecipesFromApi, allRecipesFromApiByLanguage } from '$lib/util/recipesFromApi';
+	import {
+		allRecipesFromApi,
+		allRecipesFromApiByLanguage,
+		detectLanguage
+	} from '$lib/util/recipesFromApi';
 	import type { Recipe } from '$lib/typeDef/recipeApiResponse';
 	import RecipeCard from './recipeCard.svelte';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _, isLoading } from 'svelte-i18n';
+	setupLocale();
 
 	let recipeList: Recipe[] = [];
 	let currentPage = 1;
@@ -14,7 +21,7 @@
 	});
 
 	async function getMoreRecipes() {
-		const recipeData = await allRecipesFromApiByLanguage('nl', currentPage++, pageSize);
+		const recipeData = await allRecipesFromApiByLanguage(detectLanguage(), currentPage++, pageSize);
 		if (recipeData.error == null) {
 			recipeList = recipeList.concat(recipeData.data);
 			maxPages = recipeData.total ?? maxPages;
@@ -31,12 +38,14 @@
 			{/each}
 		</div>
 		{#if maxPages >= currentPage}
-			<button class="btn" type="button" on:click={getMoreRecipes}>
-				<span class="defaultFont">Load more recipes</span>
-			</button>
+			{#if !$isLoading}
+				<button class="btn" type="button" on:click={getMoreRecipes}>
+					<span class="defaultFont">{$_('load_more_recipes')}</span>
+				</button>
+			{/if}
 		{/if}
-	{:else}
-		<span>Loading recipes...</span>
+	{:else if !$isLoading}
+		<span>{$_('loading_recipes')}</span>
 	{/if}
 </div>
 

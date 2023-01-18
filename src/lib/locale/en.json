@@ -1,0 +1,11 @@
+{
+	"recipe": "Recipe",
+	"loading_recipe": "Loading recipe...",
+	"loading_recipes": "Loading recipes...",
+	"follow_recipe_instructions": "Follow the recipe instructions listed down below",
+	"recipe_details": "Recipe details",
+	"hello_fresh_recipes": "Hello Fresh Recipes",
+	"all_recipes_one_place": "All the Hello Fresh recipes in one place",
+	"read_recipe": "Read recipe",
+	"load_more_recipes": "Load more recipes"
+}

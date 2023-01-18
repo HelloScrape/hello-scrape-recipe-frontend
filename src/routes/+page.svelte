@@ -4,12 +4,15 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	import { onMount } from 'svelte';
 	import RecipeList from '$lib/components/recipeList/recipeList.svelte';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _, isLoading } from 'svelte-i18n';
 	const SEOTags = {
 		metadescription:
 			'All the Hello Fresh recipes in one place. Find the best recipes and get cooking!',
 		slug: '',
 		title: 'All Hello Fresh Recipes'
 	};
+	setupLocale();
 	onMount(async () => {
 		await import('@lottiefiles/lottie-player');
 	});
@@ -17,23 +20,27 @@
 
 <SEO {...SEOTags} />
 <Navbar />
-<div class="content">
-	<lottie-player
-	autoplay={true}
-	loop
-	mode="normal"
-	src="https://assets5.lottiefiles.com/private_files/lf30_e15kjsdl.json"
-	style="width: 120px"
-	speed="1"
-/>
-	<div class="header">
-		<h1>Hello Fresh Recipes</h1>
-		<span class="callToAction">All the Hello Fresh recipes in one place</span>
+{#if $isLoading}
+	<h1>Loading...</h1>
+{:else}
+	<div class="content">
+		<lottie-player
+			autoplay={true}
+			loop
+			mode="normal"
+			src="https://assets5.lottiefiles.com/private_files/lf30_e15kjsdl.json"
+			style="width: 120px"
+			speed="1"
+		/>
+		<div class="header">
+			<h1>{$_('hello_fresh_recipes')}</h1>
+			<span class="callToAction">{$_('all_recipes_one_place')}</span>
+		</div>
+		<div class="recipeCards">
+			<RecipeList />
+		</div>
 	</div>
-	<div class="recipeCards">
-		<RecipeList />
-	</div>
-</div>
+{/if}
 <div class="footerComponent">
 	<Footer />
 </div>

@@ -1,0 +1,11 @@
+{
+	"recipe": "Recette",
+	"loading_recipe": "Chargement de la recette...",
+	"loading_recipes": "Chargement de la recettes...",
+	"follow_recipe_instructions": "Suivez les instructions de la recette ci-dessous",
+	"recipe_details": "Détails de la recette",
+	"hello_fresh_recipes": "Recettes Hello Fresh",
+	"all_recipes_one_place": "Toutes les recettes Hello Fresh en un seul endroit",
+	"read_recipe": "Lire la recette",
+	"load_more_recipes": "Charger plus de recettes"
+}
