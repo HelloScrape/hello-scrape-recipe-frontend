@@ -121,11 +121,15 @@
 			text-align: center;
 			margin-bottom: 1em;
 		}
-		.mirrorDescription hr {
-			width: 100%;
+		.header {
+			width: 95%;
 		}
-		.mirrorDescription {
-			width: 75%;
+		.header span {
+			width: 95%;
+		}
+
+		.recipeContent {
+			width: 95%;
 		}
 	}
 </style>
