@@ -5,7 +5,7 @@
 	<span>© {new Date().getFullYear()} - Hello Fresh Recipes</span>
 	<span>
 		Made with <span class="emojiFont">❤️</span> by
-		<a class="githubProfile" target="_blank" rel="noreferrer" href="https://github.com/GewoonJaap/"
+		<a class="githubProfile" target="_blank" rel="noreferrer" href="https://github.com/HelloScrape/"
 			>Jaap</a
 		>
 	</span>

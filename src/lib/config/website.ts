@@ -9,7 +9,7 @@ const website = {
 	backgroundColor: '#1b4079',
 	themeColor: '#d62828',
 	contactEmail: 'contact@mrproper.dev',
-	githubPage: 'https://github.com/GewoonJaap'
+	githubPage: 'https://github.com/HelloScrape'
 };
 
 export { website as default };
