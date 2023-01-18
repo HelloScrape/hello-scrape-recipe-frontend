@@ -2,7 +2,9 @@ import type { RecipeResponse } from '$lib/typeDef/recipeApiResponse';
 import { getLocaleFromNavigator } from 'svelte-i18n';
 
 export async function allRecipesFromApi(page = 1, pageSize = 25): Promise<RecipeResponse> {
-	const response = await fetch(`https://helloscrape-backend.mrproper.dev/recipe?page=${page}&pageSize=${pageSize}`);
+	const response = await fetch(
+		`https://helloscrape-backend.mrproper.dev/recipe?page=${page}&pageSize=${pageSize}`
+	);
 	const data = await response.json();
 	return data;
 }
