@@ -5,7 +5,6 @@
 HelloScrape Frontend is a Svelte webapp that displays a large list of Hello Fresh recipes.
 This is a **personal** hobby project and all the recipes shown are gathered from the **public** Hello Fresh website "https://www.hellofresh.nl/about/nieuws".
 
-
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
