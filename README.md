@@ -1,8 +1,10 @@
-# Hello Fresh Recipe Frontend
+# HelloScrape Frontend
 
 ## Introduction
 
-Hello Fresh Recipe Frontend is a Svelte webapp that displays a large list of Hello Fresh recipes.
+HelloScrape Frontend is a Svelte webapp that displays a large list of Hello Fresh recipes.
+This is a **personal** hobby project and all the recipes shown are gathered from the **public** Hello Fresh website "https://www.hellofresh.nl/about/nieuws".
+
 
 ## Developing
 
