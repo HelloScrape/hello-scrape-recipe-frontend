@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 
 export const prerender = true;
 
-const siteUrl = 'https://helloscrape.com/';
+const siteUrl = 'https://helloscrape.com';
 let allRecipes: Recipe[] = [];
 
 const render = (recipes: Recipe[], origin: string) => `<?xml version="1.0" encoding="UTF-8" ?>
@@ -21,7 +21,7 @@ const render = (recipes: Recipe[], origin: string) => `<?xml version="1.0" encod
 	>
 
     <url>
-  <loc>${siteUrl}</loc>
+  <loc>${siteUrl}/</loc>
   <lastmod>2023-01-17T15:29:50+00:00</lastmod>
 </url>
 
